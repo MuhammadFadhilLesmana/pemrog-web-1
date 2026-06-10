@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DhilPhotography</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .serif-text {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .page-frame {
+            position: relative;
+            max-width: 1060px;
+            margin: 3rem auto;
+            padding: 15px 25px 15px 25px;
+        }
+        
+        .corner {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-color: rgb(255, 238, 0);
+            border-style: solid;
+        }
+        
+        .corner-tl {
+            top: 0;
+            left: 0;
+            border-width: 8px 0 0 8px;
+        }
+        
+        .corner-tr {
+            top: 0;
+            right: 0;
+            border-width: 8px 8px 0 0;
+        }
+        
+        .corner-bl {
+            bottom: 0;
+            left: 0;
+            border-width: 0 0 8px 8px;
+        }
+        
+        .corner-br {
+            bottom: 0;
+            right: 0;
+            border-width: 0 8px 8px 0;
+        }
+        
+        .navbar-wrapper {
+            background-color: rgb(255, 123, 0);
+            padding: 1.5rem 3rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: #000;
+        }
+        
+        .nav-link {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: #555 !important;
+            text-transform: uppercase;
+            margin: 0 8px;
+            letter-spacing: 1px;
+        }
+        
+        .nav-link.active-pill {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 20px !important;
+            background-color: #fff;
+        }
+        
+        .hero-section {
+            margin-top: 4.5rem;
+            margin-bottom: 3.5rem;
+        }
+        
+        .hero-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 0.8rem;
+        }
+        
+        .hero-subtext {
+            font-size: 0.55rem;
+            letter-spacing: 3px;
+            color: #a3a3a3;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .portfolio-filter {
+            margin-bottom: 2rem;
+        }
+        
+        .portfolio-filter .nav-link {
+            font-size: 0.7rem;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #888 !important;
+            margin: 0 10px;
+            letter-spacing: 0;
+        }
+        
+        .portfolio-filter .active-pill {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 4px 18px !important;
+            color: #333 !important;
+        }
+        
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(20%);
+            transition: 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            filter: grayscale(0%);
+        }
+        
+        .footer-section {
+            margin-top: 5rem;
+            padding-bottom: 2rem;
+        }
+        
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 0.2rem;
+            color: #111;
+        }
+        
+        .footer-copy {
+            font-size: 0.6rem;
+            color: #a3a3a3;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons a {
+            color: #a3a3a3;
+            margin: 0 8px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-frame">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <div class="container gallery-container">
+            <div class="navbar-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <a class="navbar-brand serif-text" href="#">DhilPhotography</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item"><a class="nav-link active-pill" href="#">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">ABOUT ME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">PORTFOLIO</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="hero-section text-center">
+            <h1 class="hero-title serif-text">Hi. Hello.. I Am Fadhil...!</h1>
+            <h2 class="hero-subtitle serif-text">I Travel Around The World To Get The Best Photos of Kamen Rider.!</h2>
+            <p class="hero-subtext mt-3">AWARD WINNING PHOTOGRAPHER / CINEMATOGRAPHER / WRITER</p>
+        </div>
+
+        <div class="portfolio-filter text-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link active-pill" href="#">All</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Landscape</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Portrait</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+            </ul>
+        </div>
+
+        <div class="container gallery-container">
+            <div class="row g-1">
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=1" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=2" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=3" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=4" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=5" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=6" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=7" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=8" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=9" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=10" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=11" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=12" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=13" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=14" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=15" alt="Kamen Rider" class="gallery-img"></div>
+                <div class="col-6 col-md-3"><img src="https://loremflickr.com/400/300/kamen,rider?lock=16" alt="Kamen Rider" class="gallery-img"></div>
+            </div>
+        </div>
+
+        <footer class="footer-section text-center">
+            <h4 class="footer-brand serif-text">DhilPhotography</h4>
+            <p class="footer-copy">© Copyrights 2026. All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                <a href="#"><i class="fa-brands fa-behance"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-500px"></i></a>
+                <a href="#"><i class="fa-brands fa-flickr"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
